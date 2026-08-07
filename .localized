@@ -1,0 +1,53 @@
+person = {"name": "farrr", "age": 77}  # dictionary
+
+people = ("gayrat", "mirza", "humoqush")  # tuple
+groups = ["group1", "group2", "group3"]  # list
+for team in person:
+    print(f"this team : {team}")
+print("---------------------")
+fruits = ["apple", "banana", "orange", "kiwi"]  # list
+a = fruits[0]
+print("a:", a)
+a = fruits[0:3]
+print("a:", a)
+c = fruits[::3]
+print("c:", c)
+d = fruits[::-1]
+print("d:", d)
+print("--------list methods  --------")
+# methods> append(), insert(), remove(), pop(), index(), sort()
+letters = ["a", "B", "c", "d"]
+
+letters.append("n")  # add behind
+print(f"letters: {letters}")
+
+letters.insert(0, "k")  # add from front
+print(f"letters:{letters}")
+
+size = len(letters) - 1
+result = letters.pop(size)  # pop behind
+print(f"result: {result}")
+print(f"letters: {letters} and result:{result}")
+
+lresult = letters.pop(0)  # pop front
+print(f" lresult: {lresult} and letters: {letters}")
+
+animals = ["cat", "dog", "rabbit", "tiger"]
+animals.remove("dog")
+print(f" remove animals:{animals}")
+
+del animals[2:4]
+print(f"delete animals:{animals}")
+
+exist = animals.index('cat')
+print(f" cat exists: {exist}")
+
+animals.clear()
+print(f"clear animals:{animals}")
+
+numbers = [5, 6, 7, 8, 9, 909]
+numbers.sort()
+print(f" sorted:{numbers}")
+numbers.sort(reverse=True)
+
+print(f" reverseed sorted:{numbers} ")
