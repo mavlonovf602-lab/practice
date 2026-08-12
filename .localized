@@ -51,3 +51,14 @@ print(f" sorted:{numbers}")
 numbers.sort(reverse=True)
 
 print(f" reverseed sorted:{numbers} ")
+
+print(" =======lambda functions ========")
+# small anonymous function
+people = [
+    ("gayrat", 23),
+    ("chuombek", 56),
+    ("hotin quli", 19)
+]
+
+people.sort(key=lambda person: person[1])
+print("people(2):", people)
