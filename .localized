@@ -55,10 +55,51 @@ print(f" reverseed sorted:{numbers} ")
 print(" =======lambda functions ========")
 # small anonymous function
 people = [
-    ("gayrat", 23),
-    ("chuombek", 56),
-    ("hotin quli", 19)
+    ("gayrat", 23, 45),
+    ("chuombek", 56, 98),
+    ("hotin quli", 19, 78)
 ]
 
-people.sort(key=lambda person: person[1])
+people.sort(key=lambda person: person[2])
 print("people(2):", people)
+
+print("====== enumerate and map and filter=========")
+
+# map bilan - har bir elementni 2 ga ko'paytirish
+sonlar = [1, 2, 3, 4, 5]
+natija = list(map(lambda x: x * 2, sonlar))
+print(natija)  # [2, 4, 6, 8, 10]
+
+# filter bilan - juft sonlarni ajratish
+juft_sonlar = list(filter(lambda x: x % 2 == 0, sonlar))
+print(juft_sonlar)  # [2, 4]
+
+# sorted bilan - lug'atlar ro'yxatini saralash
+odamlar = [{"ism": "Ali", "yosh": 25}, {"ism": "Vali", "yosh": 20}]
+saralangan = sorted(odamlar, key=lambda o: o["yosh"])
+print(saralangan)
+
+
+def calculate(x, y): return x+y
+
+
+result = calculate(666, 54321)
+print("result----", result)
+javiblar = ("a", "b", "b", "c", "b", "c", "d", "d", "d")
+for test in enumerate(javiblar):
+    print("test:", test)
+for (index, value) in enumerate(javiblar):
+    print(f"index:{index} and value:{value}")
+
+
+print("--------map --------")
+cars = [("bmw", 1988),
+        ("mers", 1999),
+        ("audio", 1888),
+        ("ford", 2003)]
+result_map = map(lambda car: car[0], cars)
+result = list(result_map)
+print("javob:", result)
+print(f"the tuslt map {result_map} and type {type(result_map)}")
+result_filter = filter(lambda car: car[1] > 1990, cars)
+print(list(result_filter))
