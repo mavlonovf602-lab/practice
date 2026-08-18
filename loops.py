@@ -1,11 +1,16 @@
-def calculate(*args):
-    print("args", args)
-    total = 1
-    for x in args:
-        total *= x
-    print(f" the type value: {type(args)}")
-    return total
+def eng_katt(*sonlar):
+    return max(sonlar)
 
 
-calculate(2, 3, 4, 5, 6, 7, 8, 9, 77, 77, 65)
-print(f"the total value:{total}")
+print(eng_katt(1, 2, 3, 3, 4, 45, 5, 6))
+
+
+def eng_katt(*sonlar):
+    natija = sonlar[0]      # birinchi sonni "hozircha eng katta" deb olamiz
+    for son in sonlar:
+        if son > natija:     # agar keyingi son undan katta bo'lsa
+            natija = son      # yangi eng katta qilib belgilaymiz
+    return natija
+
+
+print(eng_katt(1, 2, 3, 3, 4, 45, 5, 6))  # 45
